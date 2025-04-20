@@ -59,26 +59,32 @@ We chose a **Random Forest Classifier** due to its:
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 📈 Model Evaluation
-Predictions were evaluated using standard classification metrics:
+The model performed exceptionally well on the test set:
 
 
 Metric	Value
-Accuracy	~0.81
-Precision	~0.79
-Recall	~0.75
-F1 Score	~0.77
+Accuracy	1.00
+Precision	1.00
+Recall	1.00
+F1 Score	1.00
 🧾 Classification Report
-markdown
-Copy
-Edit
-              precision    recall  f1-score   support
 
-           0       0.85      0.87      0.86       105
-           1       0.76      0.73      0.75        74
+precision    recall  f1-score   support
 
-    accuracy                           0.81       179
-   macro avg       0.81      0.80      0.80       179
-weighted avg       0.81      0.81      0.81       179
+           0       1.00      1.00      1.00        53
+           1       1.00      1.00      1.00        31
+
+    accuracy                           1.00        84
+   macro avg       1.00      1.00      1.00        84
+weighted avg       1.00      1.00      1.00        84
+
+🧠 Note: While a perfect score is impressive, be cautious—it might indicate:
+
+A very easy split of the dataset,
+
+Potential data leakage, or
+
+A small test set that doesn't generalize well.
 
 💾 Files Included
 Titanic_Survival_Prediction.ipynb: Google Colab notebook with full implementation
